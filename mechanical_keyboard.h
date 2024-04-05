@@ -20,11 +20,11 @@ public:
         this->switch_type = switch_type; 
         this->build = build; 
     }
-    string get_switch_type() 
+    string get_switch_type() const
     { 
         return switch_type; 
     } 
-    string get_build() 
+    string get_build() const
     { 
         return build; 
     }
@@ -36,6 +36,14 @@ public:
     { 
         this->build = build; 
     }
+
+    friend ostream& operator<<(ostream& os, const device& mk);
 }; 
+
+ostream& operator<<(ostream& os, const mechanical_keyboard& mk)
+{
+    os << "Brand: " << mk.get_brand() << ", Price: " << mk.get_price() << "p" << ", Format: " << mk.get_format() << "%" << ", Keycap Material: " << mk.get_keycap_material() << ", Keycap Profile: " << mk.get_keycap_profile() << ", Switch Type: " << mk.get_switch_type() << ", Build: " << mk.get_build() << endl;
+    return os;
+}
 
 #endif

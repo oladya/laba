@@ -23,15 +23,15 @@ public:
         this->number_of_extrabuttons = number_of_extrabuttons;
         this->weight = weight; 
     }
-    int get_dpi() 
+    int get_dpi() const
     { 
         return dpi; 
     } 
-    int get_number_of_extrabuttons() 
+    int get_number_of_extrabuttons() const
     { 
         return number_of_extrabuttons; 
     }
-    int get_weight() 
+    int get_weight() const
     { 
         return weight; 
     } 
@@ -47,6 +47,15 @@ public:
     { 
         this->weight = weight; 
     }  
+
+    friend ostream& operator<<(ostream& os, const device& m);
 }; 
+
+ostream& operator<<(ostream& os, const mouse& m)
+{
+    os << "Brand: " << m.get_brand()  << ", Price: " << m.get_price() << "p" << ", DPI: " << m.get_dpi() << ", Extra Buttons: " << m.get_number_of_extrabuttons() << ", Weight: " << m.get_weight() << "g" << endl;
+    return os;
+}
+
 
 #endif

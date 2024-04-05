@@ -20,11 +20,11 @@ public:
         this->battery_capacity = battery_capacity; 
         this->connection_type = connection_type; 
     }
-    int get_battey_capacity() 
+    int get_battey_capacity() const
     { 
         return battery_capacity; 
     } 
-    string get_connection_type() 
+    string get_connection_type() const
     { 
         return connection_type; 
     }
@@ -36,6 +36,14 @@ public:
     { 
         this->connection_type = connection_type; 
     }
+
+    friend ostream& operator<<(ostream& os, const device& wm);
 }; 
+
+ostream& operator<<(ostream& os, const wireless_mouse& wm)
+{
+    os << "Brand: " << wm.get_brand() << ", Price: " << wm.get_price() << "p" << ", DPI: " << wm.get_dpi() << ", Number of Extra Buttons: " << wm.get_number_of_extrabuttons() << ", Weight: " << wm.get_weight() << "g" << ", Battery Capacity: " << wm.get_battey_capacity() << "mah" << ", Connection Type: " << wm.get_connection_type() << endl;
+    return os;
+}
 
 #endif
