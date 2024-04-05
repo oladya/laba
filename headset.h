@@ -23,15 +23,15 @@ public:
         this->noise_cancelling = noise_cancelling; 
         this->noise_cancelling = noise_cancelling;
     }
-    int get_driver_size() 
+    int get_driver_size() const
     { 
         return driver_size; 
     } 
-    string get_noise_cancelling() 
+    string get_noise_cancelling() const
     { 
         return noise_cancelling; 
     }
-    string get_mic() 
+    string get_mic() const
     { 
         return mic; 
     } 
@@ -47,6 +47,15 @@ public:
     { 
         this->mic = mic; 
     }  
+
+    friend ostream& operator<<(ostream& os, const device& h);
 }; 
+
+ostream& operator<<(ostream& os, const headset& h)
+{
+    os << "Brand: " << h.get_brand() << ", Price: " << h.get_price() << "p" << ", Driver Size: " << h.get_driver_size() << "mm" << ", Noise Cancelling: " << h.get_noise_cancelling() << ", Microphone: " << h.get_mic() << endl;
+    return os;
+}
+
 
 #endif

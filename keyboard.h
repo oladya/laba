@@ -23,15 +23,15 @@ public:
         this->keycap_material = keycap_material; 
         this->keycap_profile = keycap_profile;
     }
-    int get_format() 
+    int get_format() const
     { 
         return format; 
     } 
-    string get_keycap_material() 
+    string get_keycap_material() const
     { 
         return keycap_material; 
     }
-    string get_keycap_profile() 
+    string get_keycap_profile() const
     { 
         return keycap_profile; 
     } 
@@ -47,6 +47,15 @@ public:
     { 
         this->keycap_profile = keycap_profile; 
     }  
+
+    friend ostream& operator<<(ostream& os, const device& k);
 }; 
+
+ostream& operator<<(ostream& os, const keyboard& k)
+{
+    os << "Brand: " << k.get_brand()  << ", Price: " << k.get_price() << "p" << ", Format: " << k.get_format() << "%" << ", Keycap Material: " << k.get_keycap_material() << ", Keycap Profile: " << k.get_keycap_profile() << endl;
+    return os;
+}
+
 
 #endif

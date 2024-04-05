@@ -21,11 +21,11 @@ public:
         this->brand = brand; 
         this->price = price; 
     }
-    string get_brand() 
+    string get_brand() const
     { 
         return brand; 
     } 
-    float get_price() 
+    float get_price() const
     { 
         return price; 
     } 
@@ -36,7 +36,17 @@ public:
     void set_price(float& price) 
     { 
         this->price = price; 
-    }   
+    }
+
+    friend ostream& operator<<(ostream& os, const device& d);
 }; 
+
+ostream& operator<<(ostream& os, const device& d)
+{
+    os << "Brand: " << d.get_brand() << ", Price: " << to_string(d.get_price()) << "p" << endl;
+    return os;
+}
+
+
 
 #endif
