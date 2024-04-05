@@ -5,7 +5,6 @@ using namespace std;
 
 class device 
 { 
-
 private: 
     string brand; 
     float price;  
@@ -46,7 +45,5 @@ ostream& operator<<(ostream& os, const device& d)
     os << "Brand: " << d.get_brand() << ", Price: " << to_string(d.get_price()) << "p" << endl;
     return os;
 }
-
-
 
 #endif

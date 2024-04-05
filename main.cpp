@@ -7,8 +7,7 @@
 #include "mechanical_keyboard.h"
 
 int main()
-{
-    
+{ 
     printf("Characteristisc of macbook m1:\n");
     string brand1 = "apple";
     float price1 = 99999.99;

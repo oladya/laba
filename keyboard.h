@@ -4,7 +4,6 @@
 
 class keyboard : public device
 { 
-
 private: 
     int format; 
     string keycap_material;  
@@ -56,6 +55,5 @@ ostream& operator<<(ostream& os, const keyboard& k)
     os << "Brand: " << k.get_brand()  << ", Price: " << k.get_price() << "p" << ", Format: " << k.get_format() << "%" << ", Keycap Material: " << k.get_keycap_material() << ", Keycap Profile: " << k.get_keycap_profile() << endl;
     return os;
 }
-
 
 #endif

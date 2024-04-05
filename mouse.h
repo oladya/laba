@@ -4,7 +4,6 @@
 
 class mouse : public device
 { 
-
 private: 
     int dpi; 
     int number_of_extrabuttons;  
@@ -56,6 +55,5 @@ ostream& operator<<(ostream& os, const mouse& m)
     os << "Brand: " << m.get_brand()  << ", Price: " << m.get_price() << "p" << ", DPI: " << m.get_dpi() << ", Extra Buttons: " << m.get_number_of_extrabuttons() << ", Weight: " << m.get_weight() << "g" << endl;
     return os;
 }
-
 
 #endif

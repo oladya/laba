@@ -4,7 +4,6 @@
 
 class wireless_mouse : public mouse
 { 
-
 private: 
     int battery_capacity; 
     string connection_type;

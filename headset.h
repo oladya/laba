@@ -4,7 +4,6 @@
 
 class headset : public device
 { 
-
 private: 
     int driver_size; 
     string noise_cancelling;  

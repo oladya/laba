@@ -4,7 +4,6 @@
 
 class mechanical_keyboard : public keyboard
 { 
-
 private: 
     string switch_type; 
     string build;  
