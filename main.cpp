@@ -8,14 +8,14 @@
 
 int main()
 { 
-    printf("Characteristisc of macbook m1:\n");
+    printf("Characteristics of macbook m1:\n");
     string brand1 = "apple";
     float price1 = 99999.99;
     device macbook_m1(brand1, price1);
     cout << macbook_m1;
     printf("\n");
 
-    printf("Characteristisc of logitech g102:\n");
+    printf("Characteristics of logitech g102:\n");
     string brand2 = "logitech";
     float price2 = 2999.99;
     int dpi1 = 8000;
@@ -25,7 +25,7 @@ int main()
     cout << logitech_g102;
     printf("\n");
 
-    printf("Characteristisc of Razer Ornata v3:\n");
+    printf("Characteristics of Razer Ornata v3:\n");
     string brand3 = "Razer";
     float price3 = 4999.99;
     int format1 = 100;
@@ -35,7 +35,7 @@ int main()
     cout << razer_ornata_v3;
     printf("\n");
 
-    printf("Characterics of HyperX Cloud 2:\n");
+    printf("Characteristics of HyperX Cloud 2:\n");
     string brand4 = "hyperx";
     float price4 = 7999.99;
     int driver_size = 15;
@@ -45,7 +45,7 @@ int main()
     cout << cloud2;
     printf("\n");
     
-    printf("Characterics of Logitech G PRO:\n");
+    printf("Characteristics of Logitech G PRO:\n");
     string brand5 = "logitech";
     float price5 = 9999.99;
     int dpi2 = 16000;
@@ -57,7 +57,7 @@ int main()
     cout << logitech_g_pro;
     printf("\n");
     
-    printf("Characterics of Varmilo Panda:\n");
+    printf("Characteristics of Varmilo Panda:\n");
     string brand6 = "varmilo";
     float price6 = 19999.99;
     int format2 = 60;
